@@ -50,4 +50,12 @@ const reviews = [
 
   // set starting item
   let currentItem = 0;
-  
+
+  // load initial item
+  window.addEventListener("DOMContentLoaded", function () {
+    const item = reviews[currentItem];
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+  });
